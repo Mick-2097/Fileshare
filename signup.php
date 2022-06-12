@@ -31,7 +31,7 @@
             <input type="password" name="password" id="password" placeholder="Repeat Password" required>
         </div>
         <button class="btn" type="submit" name="submit">SIGN UP</button>
-        <p class="signup-p">Already a member? &nbsp;<a class="sign-up-link" href="index.html">Log in</a></p>
+        <p class="signup-p">Already a member? &nbsp;<a class="sign-up-link" href="index.php">Log in</a></p>
         </p>
     </form>
 

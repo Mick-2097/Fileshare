@@ -29,9 +29,10 @@
                   <th>File name</th>
                   <th>Delete</th>
                 </tr>
-                <tr>
-                </tr>
               </thead>
+              <tbody>
+                
+              </tbody>
           </table>
         </div>
         

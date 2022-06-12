@@ -27,7 +27,7 @@
             <input type="password" name="password" id="password" required>
         </div>
         <button class="btn" type="submit" name="submit">LOG IN</button>
-        <p class="login-p">Not a member? &nbsp;<a class="sign-up-link" href="signup.html">Sign up</a></p>
+        <p class="login-p">Not a member? &nbsp;<a class="sign-up-link" href="signup.php">Sign up</a></p>
         </p>
     </form>
 
