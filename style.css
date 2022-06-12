@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    line-height: 1.4;
+    font-size: 24px;
+    font-family: 'Indie Flower';
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(/files.png);
+    background-color: #111;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+nav {
+    width: 100%;
+    padding: 2rem;
+    background-color: #111;
+    color: yellowgreen;
+    border-bottom: 2px solid yellowgreen;
+    padding: 2rem 0;
+    text-align: center;
+}
+nav h1 {
+    font-size: 48px;
+}
+.file-form,
+.signup-form,
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    outline: 2px solid yellowgreen;
+    background-color: #111;
+    color: yellowgreen;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 50vw;
+    margin: 2rem auto;
+}
+.signup-form h2,
+.login-form h2 {
+    margin: auto;
+    color: whitesmoke;
+}
+.signup-form input,
+.login-form input {
+    cursor: text;
+    width: 100%;
+    background-color: #111;
+    border: 1px solid yellowgreen;
+    color: whitesmoke;
+    padding-left: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.signup-p,
+.login-p {
+    margin: auto;
+    color: whitesmoke;
+}
+.signup-p a,
+.login-p a {
+    cursor: pointer;
+    color: yellowgreen;
+    text-decoration: underline;
+}
+.error-output {
+    font-family: sans-serif;
+    color: red;
+}
+.file-table {
+    background-color: #111;
+    width: 50%;
+    margin: auto;
+}
+th {
+    color: whitesmoke;
+}
+td {
+    color: yellowgreen;
+}
+th,
+td {
+    outline: 1px solid yellowgreen;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    width: 100vw;
+    color: whitesmoke;
+    background-color: #111;
+    border-top: 2px solid yellowgreen;
+    padding: 0.5rem 0;
+}
+.attribution a { 
+    cursor: pointer;
+    letter-spacing: 2px;
+    color: yellowgreen; 
+}
+.upload-btn,
+.btn {
+    cursor: pointer;
+    width: fit-content;
+    color: yellowgreen;
+    outline: 1px solid yellowgreen;
+    background-color: #111;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding: 0.25rem 1rem;
+    border-radius: 8px;
+    margin: auto;
+}
+.logout-btn {
+    cursor: pointer;
+    width: fit-content;
+    color: yellowgreen;
+    outline: 1px solid yellowgreen;
+    background-color: #111;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding: 0.25rem 1rem;
+    border-radius: 8px;
+    margin: 0 2rem 0 auto;
+}
+.upload-btn:hover,
+.logout-btn:hover,
+.btn:hover {
+    background-color: yellowgreen;
+    color: #111;
+    transition: all 250ms ease-in-out;
+}
+.hidden {
+    display: none;
+}
