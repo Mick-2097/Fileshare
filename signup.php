@@ -45,9 +45,12 @@ if (isset($_POST['submit'])) {
             $validation_errors++;
             $password_error = 'passwords must match';
     }
-    if ($validation_errors === 0) {
-        array_push($database, json_encode($new_user));
-    }
+    
+    // I gotta work on this
+    
+    // if ($validation_errors === 0) {
+    //     file_put_contents('database.json', json_encode($new_user));
+    // }
 }
 ?>
 
