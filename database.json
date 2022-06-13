@@ -1,0 +1,22 @@
+[
+    {
+        "username": "test",
+        "email": "test@testy.com",
+        "password": "$2y$10$8vwAnlWq7DFaeKr5xeQgU.FVfwbv67DaQRxwwRCuBVRz3hl1vugsm"
+    },
+    {
+        "username": "test2",
+        "email": "test1@testy.com",
+        "password": "$2y$10$8vwAnlWq7DFaeKr5xeQgU.FVfwbv67DaQRxwwRCuBVRz3hl1vugsm"
+    },
+    {
+        "username": "test3",
+        "email": "test2@testy.com",
+        "password": "$2y$10$8vwAnlWq7DFaeKr5xeQgU.FVfwbv67DaQRxwwRCuBVRz3hl1vugsm"
+    },
+    {
+        "username": "test4",
+        "email": "test3@testy.com",
+        "password": "$2y$10$8vwAnlWq7DFaeKr5xeQgU.FVfwbv67DaQRxwwRCuBVRz3hl1vugsm"
+    }
+]

@@ -31,10 +31,6 @@
         </p>
     </form>
 
-
-
-
-
     <footer class="attribution">
         <p>
           Challenge by 

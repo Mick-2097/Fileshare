@@ -11,23 +11,26 @@
     display: none;
 }
 body {
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100vw;
     min-height: 100vh;
     background-image: url(/files.png);
     background-color: #111;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 nav {
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 0 1rem 0;
     background-color: #111;
     color: yellowgreen;
     border-bottom: 2px solid yellowgreen;
-    padding: 2rem 0;
     text-align: center;
 }
 nav h1 {
@@ -140,4 +143,9 @@ td {
 }
 .hidden {
     display: none;
+}
+.error {
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
 }

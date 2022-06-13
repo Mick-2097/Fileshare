@@ -1,3 +1,54 @@
+<?php 
+$database = json_decode(file_get_contents('database.json'), true);
+$username_error = '';
+$email_error = '';
+$password_error = '';
+$validation_errors = 0;
+
+$new_user = [
+    "username" => '',
+    "email" => '',
+    "password" => ''
+];
+
+if (isset($_POST['submit'])) { 
+    // for ($i = 0; $i < count($database); $i++) {
+    //     if ($_POST['username'] === $database[$i]['username']) {
+    //         $validation_errors++;
+    //         $username_error = 'That username is taken';
+    //     } else {
+    //         $new_user['username'] = $_POST['username'];
+    //         $username_error = 'This logic stinks on ice!!';
+    //     }
+    // }
+    foreach ($database as $value) {
+        if ($_POST['username'] === $value['username']) {
+            $validation_errors++;
+            $username_error = 'That username is taken';
+        } else {
+            $new_user['username'] = $_POST['username'];
+            $username_error = 'This logic stinks on ice!!';
+        }
+    }
+
+    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        $email_error = '';
+        $new_user['email'] = $_POST['email'];
+    } else {
+            $validation_errors++;
+            $email_error = 'Please enter a valid email';
+    }
+
+    if ($_POST['password'] === $_POST['repeat']) {
+        $new_user['password'] = $_POST['password'];
+    } else {
+            $validation_errors++;
+            $password_error = 'passwords must match';
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,29 +66,36 @@
         <h1>Fileshare</h1>
     </nav>
 
-    <form class="signup-form" action="index.php" method="POST">
+
+    <?php 
+    if ($validation_errors === 0) {
+        print_r(json_encode($new_user));
+    }
+    ?>
+    <form class="signup-form" action="signup.php" method="POST">
         <h2>SIGN UP</h2>
         <div>
             <label for="username">Username : </label>
-            <input type="text" name="username" id="username" placeholder="Select username" required>
+            <input type="text" name="username" placeholder="Select username" required>
+            <?php echo "<p class=\"error\">" . $username_error . "</p>"; ?>
         </div>
         <div>
             <label for="email">Email : </label>
-            <input type="email" name="email" id="email" placeholder="Enter email" required>
+            <input type="text" name="email" placeholder="Enter email" required>
+            <?php echo "<p class=\"error\">" . $email_error . "</p>"; ?>
         </div>
         <div>
             <label for="password">Password : </label>
-            <input type="password" name="password" id="password" placeholder="Select Password" required>
-            <input type="password" name="password" id="password" placeholder="Repeat Password" required>
+            <input type="password" name="password" placeholder="Select Password" required>
+            <br>
+            <?php echo "<p class=\"error\">" . $password_error . "</p>"; ?>
+            <br>
+            <input type="password" name="repeat" placeholder="Repeat Password" required>
         </div>
         <button class="btn" type="submit" name="submit">SIGN UP</button>
         <p class="signup-p">Already a member? &nbsp;<a class="sign-up-link" href="index.php">Log in</a></p>
         </p>
     </form>
-
-
-
-
 
     <footer class="attribution">
         <p>
