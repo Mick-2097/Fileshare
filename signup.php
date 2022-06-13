@@ -4,7 +4,6 @@ $username_error = '';
 $email_error = '';
 $password_error = '';
 $validation_errors = 0;
-
 $new_user = [
     "username" => '',
     "email" => '',
@@ -32,7 +31,6 @@ if (isset($_POST['submit'])) {
     }
 
     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        $email_error = '';
         $new_user['email'] = $_POST['email'];
     } else {
             $validation_errors++;
@@ -47,7 +45,7 @@ if (isset($_POST['submit'])) {
     }
     
     // I gotta work on this
-    
+
     // if ($validation_errors === 0) {
     //     file_put_contents('database.json', json_encode($new_user));
     // }
@@ -70,8 +68,6 @@ if (isset($_POST['submit'])) {
     <nav>
         <h1>Fileshare</h1>
     </nav>
-
-
 
     <form class="signup-form" action="signup.php" method="POST">
         <h2>SIGN UP</h2>
