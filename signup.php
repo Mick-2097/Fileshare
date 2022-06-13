@@ -45,8 +45,10 @@ if (isset($_POST['submit'])) {
             $validation_errors++;
             $password_error = 'passwords must match';
     }
+    if ($validation_errors === 0) {
+        array_push($database, json_encode($new_user));
+    }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -67,11 +69,7 @@ if (isset($_POST['submit'])) {
     </nav>
 
 
-    <?php 
-    if ($validation_errors === 0) {
-        print_r(json_encode($new_user));
-    }
-    ?>
+
     <form class="signup-form" action="signup.php" method="POST">
         <h2>SIGN UP</h2>
         <div>
